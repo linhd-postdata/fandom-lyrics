@@ -11,10 +11,11 @@ It containes more than 100 000 unannotated songs from over 6000 authors.
 - Works: 103585
 - Stanzas: 701212
 - Verses: 3451697
-- Words: 20735344
-- Characters: 120830774
+- Words: 19756294
+- Characters: 99602951
 
-The file [`fandom-lyrics.json`](./fandom-lyrics.json) contains the corpus. The format of each entry is as follows:
+
+The file [`fandom-lyrics.zip`](./fandom-lyrics.zip) contains the corpus. The format of each entry is as follows:
 
 ```json
 {
