@@ -109,3 +109,25 @@ The features included are:
 - **valence**
 
 	A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).
+
+
+
+
+# Fandom lyrics Corpus (Spanish) + Spotify features
+
+
+This corpus is a subset of the Fandom lyrics + Spotify corpus enriched with metadata obtained with the LastFM API.
+
+It contains 75000 songs with different features annotated by LastFM. The Lastfm annotations include:
+
+- **top_tags**
+
+	A list of the most common tags for each song (Some songs don't have any)
+- **similar_songs_ids**
+
+	A list of similar songs (according to LastFM) that are also on this dataset. 
+- **similar_songs_scores**
+
+	A list of the similarity scores (from 0 to 1) fro eacxh similar song. The order of the scores is the same as the order of the similar_songs_ids.
+	
+
