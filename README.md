@@ -113,7 +113,7 @@ The features included are:
 
 
 
-# Fandom lyrics Corpus (Spanish) + Spotify features
+# Fandom lyrics Corpus (Spanish) + Spotify + Last.fm features
 
 
 This corpus is a subset of the Fandom lyrics + Spotify corpus enriched with metadata obtained with the LastFM API.
