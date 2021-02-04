@@ -131,3 +131,24 @@ It contains 75000 songs with different features annotated by LastFM. The Lastfm 
 	A list of the similarity scores (from 0 to 1) fro eacxh similar song. The order of the scores is the same as the order of the similar_songs_ids.
 	
 
+# Fandom lyrics Corpus (Spanish) + Rantanplan scansion
+
+It contains 103585 songs with scansion obtained from [Rantanplan](https://github.com/linhd-postdata/rantanplan).
+
+The features included are:
+
+- **author**
+- **title**
+- **text**
+- **scansion**
+  
+  First, Rantanplan will show a list of lines. Each line is then shown as two separate lists. 
+  A list of tokens, and a list of "phonological groups" i.e., the phonological units that form a verse after synalephas and sinaereris are taken into account.
+  
+  At the verse level we find information about the verse itself, e.g.:
+	
+  + rhythm: Pattern of the unstressed (-) and stressed (+) syllable.
+  + length: Proposed length for the verse.
+  + rhyme: A letter code to match rhyming verses. 
+	
+  The complete list of features can be found at [rantanplan docs](https://github.com/linhd-postdata/rantanplan#output-example)
