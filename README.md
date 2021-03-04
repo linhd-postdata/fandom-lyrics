@@ -109,8 +109,9 @@ The features included are:
 - **valence**
 
 	A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).
+- **genres**
 
-
+	A list with the genres associated with the artist, retrieved from the spotify API. Some artists couldn't be found on the Spotify database.
 
 
 # Fandom lyrics Corpus (Spanish) + Spotify + Last.fm features
