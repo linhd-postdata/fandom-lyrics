@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<div class="container-narrow">
+  <h1 class="mt-5">Upload</h1>
+    <br/>
+    <form enctype="multipart/form-data" class="form" id="uploadForm" method="POST" action="" role="form">
+       {{ form.csrf_token }}
+        <div class="input-group mb-2 mr-sm-2">
+        {{ form.file(placeholder="File", class_=" mr-sm-1 my-auto") }}
+        </div>
+        <div class="input-group mb-2 mr-sm-2">
+          {{ form.pos.label(class_=" mr-sm-1 my-auto") }}
+          {{ form.pos(class_=" mr-sm-1 my-auto") }}
+          {{ form.lemmas.label(class_=" mr-sm-1 my-auto") }}
+          {{ form.lemmas(placeholder="Lemmas", class_=" mr-sm-1 my-auto") }}
+          {{ form.deps.label(class_=" mr-sm-1 my-auto") }}
+          {{ form.deps(placeholder="Deps", class_=" mr-sm-1 my-auto") }}
+          {{ form.ner.label(class_=" mr-sm-1 my-auto") }}
+          {{ form.ner(placeholder="NER", class_=" mr-sm-1 my-auto") }}
+        </div>
+        <div class="input-group mb-2 mr-sm-2">
+          {{ form.punct.label(class_=" mr-sm-1 my-auto") }}
+          {{ form.punct(placeholder="Remove punct", class_=" mr-sm-1 my-auto") }}
+          {{ form.spaces.label(class_=" mr-sm-1 my-auto") }}
+          {{ form.spaces(placeholder="Remove spaces", class_=" mr-sm-1 my-auto") }}
+          {{ form.stop.label(class_=" mr-sm-1 my-auto") }}
+          {{ form.stop(placeholder="Remove stopwords", class_=" mr-sm-1 my-auto") }}
+        </div>
+        <button class="btn btn-light btn-primary m-auto" type="submit">Upload</button>
+    </form>
+  {% if tables %}
+    <h3>Example row of result dataframe</h3>
+        {% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+        {% endfor %}
+    {% else %}
+        <p>Upload new file to start</p>
+    {% endif %}
+</div>
+{% endblock %}
+
