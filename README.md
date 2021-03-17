@@ -1,3 +1,26 @@
+# About the corpora
+
+Some of the corpora files are in the Apache Parquet format due to Github file size limit. To read these files from pandas just write:
+
+```python
+import pandas as pd
+
+dataset = pd.read_parquet("path_to_file.parquet")
+```
+
+Some files are split into several chunks. In order to read all of them you must use the following code:
+
+```python
+import pandas as pd
+from pathlib import Path
+
+file_list = []
+for path in Path("path_to_folder").glob("*.parquet"):
+    df = pd.read_parquet(path)
+    file_list.append(df)
+total = pd.concat(file_list)
+```
+
 # Fandom lyrics Corpus (Spanish)
 
 
@@ -48,10 +71,11 @@ For any violations or infringement of copyright, take proper action within the s
 
 # Fandom lyrics Corpus (Spanish) + Spotify features
 
+[`spotify_corpus.parquet`](./spotify_corpus.parquet)
 
 This corpus is a subset of the Fandom lyrics corpus enriched with metadata obtained with the Spotify API.
 
-It contains 76000 songs with different features annotated by Spotify. The complete list of features can be found at https://developer.spotify.com/documentation/web-api/reference/tracks/get-several-audio-features/.
+It contains 76600 songs with different features annotated by Spotify. The complete list of features can be found at https://developer.spotify.com/documentation/web-api/reference/tracks/get-several-audio-features/.
 
 The features included are:
 
@@ -112,14 +136,20 @@ The features included are:
 - **genres**
 
 	A list with the genres associated with the artist, retrieved from the spotify API. Some artists couldn't be found on the Spotify database.
+- **n_verses**
 
+	Number of verses of the song.
+- **lengths**
+
+	A list with the number of syllables each verse of the song has.
 
 # Fandom lyrics Corpus (Spanish) + Spotify + Last.fm features
 
+[`lastfm_corpus.parquet`](./lastfm_corpus.parquet)
 
 This corpus is a subset of the Fandom lyrics + Spotify corpus enriched with metadata obtained with the LastFM API.
 
-It contains 75000 songs with different features annotated by LastFM. The Lastfm annotations include:
+It contains 74838 songs with different features annotated by LastFM. The Lastfm annotations include:
 
 - **top_tags**
 
@@ -134,7 +164,7 @@ It contains 75000 songs with different features annotated by LastFM. The Lastfm 
 
 # Fandom lyrics Corpus (Spanish) + Rantanplan scansion
 
-It contains 103585 songs with scansion obtained from [Rantanplan](https://github.com/linhd-postdata/rantanplan).
+All previous corpora with scansion information obtained from [Rantanplan](https://github.com/linhd-postdata/rantanplan) can be found in [`rantanplan-data folder`](./rantanplan-data).
 
 The features included are:
 
