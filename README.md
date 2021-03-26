@@ -206,6 +206,7 @@ packages for creating graphs and evaluating the coherence of the resulting topic
 
 # Lyrics digital fingerprint
 
+[`lyrics_digital_fingerprint.parquet`](./lyrics_digital_fingerprint.parquet)
 
 This corpus is the Sportify + LastFM dataset enriqued with rantaplan rhyme and stress, 
 and columns calculated with [3-rhyme-groups](./notebooks/3-rhyme-groups.ipynb) and 
@@ -215,3 +216,8 @@ and columns calculated with [3-rhyme-groups](./notebooks/3-rhyme-groups.ipynb) a
 - **enclosed_rhyme**: percentage of verses which ryhme is crossed (abba)
 - **couplet**: percentage of verses which are couplets (aabbcc)
 - **no_rhyme**: percentage of no rhyming verses
+- **arte_menor**: verses with less than 8 syllables
+- **octosílabo**: verses with 8 syllables
+- **enea_decasílabo**: verses with 8 or 9 syllables
+- **endecasílabo**: percentage of verses which are couplets (aabbcc)
+- **arte_mayor**: percentage of no rhyming verses
