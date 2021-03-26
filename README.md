@@ -23,7 +23,6 @@ total = pd.concat(file_list)
 
 # Fandom lyrics Corpus (Spanish)
 
-
 This corpus is a subset in JSON format of the available songs in [Fandom](https://lyrics.fandom.com/wiki/Category:Language/Spanish) (accessed on July 1st, 2020).
 
 It containes more than 100 000 unannotated songs from over 6000 authors.
@@ -183,3 +182,36 @@ The features included are:
   + rhyme: A letter code to match rhyming verses. 
 	
   The complete list of features can be found at [rantanplan docs](https://github.com/linhd-postdata/rantanplan#output-example)
+
+# LDA topics corpus
+
+[`10topic-song.csv`](./10topic-song.csv)
+- **topic**
+
+	The topic id.
+- **gamma**
+
+	 topicmodels score for the document.
+- **id**
+
+	The song ID.
+
+Through the many possible LDA implementations, we decided to use the package 
+[topicmodels][topicmodels] (Grün and Hornik, 2011). This set of tools has several advantages: 
+it is well documented, allows us to work inside tidyverse packages, specifically
+developed for fast and efficient text mining in R, and counts with accompanying 
+packages for creating graphs and evaluating the coherence of the resulting topics.
+
+[topicmodels]: https://cran.r-project.org/web/packages/topicmodels/index.html
+
+# Lyrics digital fingerprint
+
+
+This corpus is the Sportify + LastFM dataset enriqued with rantaplan rhyme and stress, 
+and columns calculated with [3-rhyme-groups](./notebooks/3-rhyme-groups.ipynb) and 
+[4-lenght-groups](./notebooks/4-lenght-groups.ipynb) notebooks:
+- **monorhyme**: 100 if poem is monorhyme, else 0
+- **crossed_rhyme**: percentage of verses which ryhme is enclosed (abab)
+- **enclosed_rhyme**: percentage of verses which ryhme is crossed (abba)
+- **couplet**: percentage of verses which are couplets (aabbcc)
+- **no_rhyme**: percentage of no rhyming verses
