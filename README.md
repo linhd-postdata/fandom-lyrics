@@ -201,6 +201,7 @@ Through the many possible LDA implementations, we decided to use the package
 it is well documented, allows us to work inside tidyverse packages, specifically
 developed for fast and efficient text mining in R, and counts with accompanying 
 packages for creating graphs and evaluating the coherence of the resulting topics.
+All topics have been calculated by lemmatizing the original text.
 
 [topicmodels]: https://cran.r-project.org/web/packages/topicmodels/index.html
 
