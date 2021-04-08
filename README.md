@@ -213,12 +213,12 @@ This corpus is the Sportify + LastFM dataset enriqued with rantaplan rhyme and s
 and columns calculated with [3-rhyme-groups](./notebooks/3-rhyme-groups.ipynb) and 
 [4-lenght-groups](./notebooks/4-lenght-groups.ipynb) notebooks:
 - **monorhyme**: 100 if poem is monorhyme, else 0
-- **crossed_rhyme**: percentage of verses which ryhme is enclosed (abab)
-- **enclosed_rhyme**: percentage of verses which ryhme is crossed (abba)
-- **couplet**: percentage of verses which are couplets (aabbcc)
-- **no_rhyme**: percentage of no rhyming verses
+- **crossed_rhyme**: number of verses which ryhme is enclosed (abab)
+- **enclosed_rhyme**: number of verses which ryhme is crossed (abba)
+- **couplet**: number of verses which are couplets (aabbcc)
+- **no_rhyme**: number of no rhyming verses
 - **arte_menor**: verses with less than 8 syllables
 - **octosílabo**: verses with 8 syllables
 - **enea_decasílabo**: verses with 8 or 9 syllables
-- **endecasílabo**: percentage of verses which are couplets (aabbcc)
-- **arte_mayor**: percentage of no rhyming verses
+- **endecasílabo**: verses which are couplets (aabbcc)
+- **arte_mayor**: verses with more than 11 syllables
