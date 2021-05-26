@@ -30,4 +30,16 @@ and a short `-` delimited description, e.g. `0-initial-data-exploration`.
       - **enea_decasílabo**: verses with 8 or 9 syllables
       - **endecasílabo**: percentage of verses which are couplets (aabbcc)
       - **arte_mayor**: percentage of no rhyming verses
+
+*  [5-merge](./5-merge.ipynb) creates [`lyrics_digital_fingerprint.parquet`](../lyrics_digital_fingerprint.parquet) file
+   by merging lyrics, spotify, rantanplan and topics information.
+   
+*  [6-subset](./6-subset.ipynb) generates a random subset for ElasticSearch experiments.
+
+*  [7-LDA_no_stopwords_no_lemmas](7-LDA_no_stopwords_no_lemmas.ipynb) applies [Latent Dirichlet Allocation (LDA)](https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation) 
+   from [gensim library](https://radimrehurek.com/gensim/models/ldamodel.html#module-gensim.models.ldamodel) to the corpus and saves the model into [`ldamodels`](../ldamodels) folder.
+   Text preprocessing: 
+      - Remove stopwords
+      - Remove punctuation
+      - Remove spaces
    
