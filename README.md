@@ -73,7 +73,6 @@ For any violations or infringement of copyright, take proper action within the s
 # Fandom lyrics Corpus (Spanish) + Spotify features
 
 
-
 This corpus is a subset of the Fandom lyrics corpus enriched with metadata obtained with the Spotify API.
 
 It contains 76600 songs with different features annotated by Spotify. The complete list of features can be found at https://developer.spotify.com/documentation/web-api/reference/tracks/get-several-audio-features/.
@@ -146,7 +145,6 @@ The features included are:
 
 # Fandom lyrics Corpus (Spanish) + Spotify + Last.fm features
 
-[`lastfm_corpus.parquet`](./lastfm_corpus.parquet)
 
 This corpus is a subset of the Fandom lyrics + Spotify corpus enriched with metadata obtained with the LastFM API.
 
@@ -165,7 +163,7 @@ It contains 74838 songs with different features annotated by LastFM. The Lastfm 
 
 # Fandom lyrics Corpus (Spanish) + Rantanplan scansion
 
-All previous corpora with scansion information obtained from [Rantanplan](https://github.com/linhd-postdata/rantanplan) can be found in [`rantanplan-data folder`](./rantanplan-data).
+All previous corpora with scansion information obtained from [Rantanplan](https://github.com/linhd-postdata/rantanplan).
 
 The features included are:
 
