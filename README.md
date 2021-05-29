@@ -27,7 +27,7 @@ This corpus is a subset in JSON format of the available songs in [Fandom](https:
 
 It containes more than 100 000 unannotated songs from over 6000 authors.
 
-To request access to this corpus files, please contact with srosmu@gmail.com
+To request access to these corpus files, please contact with srosmu@gmail.com
 
 ## Statistics
 
@@ -39,7 +39,7 @@ To request access to this corpus files, please contact with srosmu@gmail.com
 - Characters: 99602951
 
 
-The file [`fandom-lyrics.zip`](./fandom-lyrics.zip) contains the corpus. The format of each entry is as follows:
+The file fandom-lyrics.zip contains the corpus. The format of each entry is as follows:
 
 ```json
 {
@@ -64,7 +64,7 @@ The file [`fandom-lyrics.zip`](./fandom-lyrics.zip) contains the corpus. The for
 },
 ```
 
-Folder [`json`](./json) contains the works by author.
+
 
 This repo is a dump of the website www.lyrics.fandom.com, we do not own the rights of any of the works pulished here.
 
@@ -72,7 +72,7 @@ For any violations or infringement of copyright, take proper action within the s
 
 # Fandom lyrics Corpus (Spanish) + Spotify features
 
-[`spotify_corpus.parquet`](./spotify_corpus.parquet)
+
 
 This corpus is a subset of the Fandom lyrics corpus enriched with metadata obtained with the Spotify API.
 
@@ -187,7 +187,7 @@ The features included are:
 
 # LDA topics corpus
 
-[`10topic-song.csv`](./10topic-song.csv)
+
 - **topic**
 
 	The topic id.
@@ -209,7 +209,6 @@ All topics have been calculated by lemmatizing the original text.
 
 # Lyrics digital fingerprint
 
-[`lyrics_digital_fingerprint.parquet`](./lyrics_digital_fingerprint.parquet)
 
 This corpus is the Sportify + LastFM dataset enriqued with rantaplan rhyme and stress, 
 and columns calculated with [3-rhyme-groups](./notebooks/3-rhyme-groups.ipynb) and 
