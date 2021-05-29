@@ -27,6 +27,8 @@ This corpus is a subset in JSON format of the available songs in [Fandom](https:
 
 It containes more than 100 000 unannotated songs from over 6000 authors.
 
+To request access to this corpus files, please contact with srosmu@gmail.com
+
 ## Statistics
 
 - Authors: 6178
